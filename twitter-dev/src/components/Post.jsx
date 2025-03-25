@@ -4,7 +4,6 @@ import { grey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import StarIcon from '@mui/icons-material/Star';
 import { useState } from "react";
-import { Height } from "@mui/icons-material";
 
 export default function Post({ post }) {
     const [stars, setStars] = useState(post.starsCount);

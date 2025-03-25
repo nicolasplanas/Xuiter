@@ -16,14 +16,10 @@ const PostProvider = ({ children }) => {
     }, [])
 
     const createPost = async (content) => {
-        console.log('Seinding event', content)
-
         const payload = {
             author: 'Nicolas Planas',
             content
         }
-
-        console.log(payload)
 
         const response = await fetch('http://localhost:3000/posts', {
             method: 'POST',

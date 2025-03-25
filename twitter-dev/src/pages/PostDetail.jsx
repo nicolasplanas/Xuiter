@@ -1,15 +1,14 @@
-import { Card, CardContent } from "@mui/joy";
-import { Box, Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import { useLoaderData } from "react-router-dom";
+import { Card, CardContent } from "@mui/joy"
+import { Box, Typography } from "@mui/material"
+import { grey } from "@mui/material/colors"
+import { useLoaderData } from "react-router-dom"
 
 const postLoader = async ({params}) => {
-    console.log(params)
     const response = await fetch(`http://localhost:3000/posts/${params.id}`)
     const post = await response.json()
 
     return { post }
-}
+};
 
 const PostDetail = () => {
     const { post } = useLoaderData()
@@ -26,4 +25,5 @@ const PostDetail = () => {
     )
 }
 
-export { PostDetail, postLoader }
+// eslint-disable-next-line react-refresh/only-export-components
+export { PostDetail, postLoader };
